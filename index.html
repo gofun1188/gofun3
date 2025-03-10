@@ -21,13 +21,30 @@
   <meta property="og:locale" content="zh_TW">
   <meta property="og:url" content="https://gofun12.com">
 
-
   <link rel="icon" type="image/png" href="/images/icon_gamepad.png">
   <link rel="apple-touch-icon" href="/images/icon_gamepad.png">
   <link rel="canonical" href="https://gofun12.com" />
 
-  <style>
 
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1177577017109941');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1177577017109941&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -538,23 +555,6 @@
     }
   </style>
 
-  <!-- Facebook Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '474738252260202');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=474738252260202&ev=PageView&noscript=1"/>
-  </noscript>
 </head>
 
 <body>
@@ -598,7 +598,6 @@
         </div>
       </div>
 
-
       <div class="games-showcase">
         <div class="game-card">
           <div class="game-img">休閒遊戲</div>
@@ -623,12 +622,10 @@
         </div>
       </div>
 
-
       <a href="https://97y.me/t4Bge" class="cta-btn" rel="noopener"
          onclick="fbq('track', 'Lead');">
         立即註冊 領取試玩金
       </a>
-
 
       <div class="user-counter">
         <div class="user-counter-dot"></div>
@@ -637,7 +634,6 @@
         </div>
       </div>
 
- 
       <div class="social-proof" style="margin-top: 40px;">
         <p>超過 10,000+ 位玩家已選擇 GOFUN，月活人數持續攀升中</p>
         <div class="trust-icons">
@@ -666,7 +662,6 @@
         </div>
       </div>
 
-
       <div style="text-align: center; margin-top: 40px;">
         <a href="https://97y.me/t4Bge" class="cta-btn" rel="noopener"
            onclick="fbq('track', 'CompleteRegistration');">
@@ -675,7 +670,6 @@
       </div>
     </div>
   </section>
-
 
   <section class="benefits-section">
     <div class="container">
@@ -701,7 +695,6 @@
     </div>
   </section>
 
-
   <section class="promo-section">
     <div class="container">
       <div class="promo-card">
@@ -716,7 +709,6 @@
       </div>
     </div>
   </section>
-
 
   <section class="testimonials-section">
     <div class="container">
@@ -750,7 +742,6 @@
     </div>
   </section>
 
-
   <section class="steps-section">
     <div class="container">
       <h2 class="section-title">三步驟，立即上手</h2>
@@ -780,7 +771,6 @@
     </div>
   </section>
 
-
   <footer>
     <div class="container">
       <div class="footer-links">
@@ -801,7 +791,7 @@
 
 
   <script>
-
+    // 倒數計時
     var countDownDate = new Date("2025-03-15T00:00:00").getTime();
     var countdownfunction = setInterval(function() {
       var now = new Date().getTime();
@@ -825,7 +815,7 @@
       }
     }, 1000);
 
-
+    // 在線人數動態變化
     setInterval(function() {
       const currentUsers = parseInt(document.getElementById("active-users").innerText);
       const change = Math.floor(Math.random() * 10) - 4; 
@@ -833,5 +823,6 @@
       document.getElementById("active-users").innerText = newUsers;
     }, 5000);
   </script>
+
 </body>
 </html>
