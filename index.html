@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>GOFUN - 多元加密娛樂平台，註冊就送 28 USDT</title>
+  <title>GOFUN - 台灣首家加密娛樂平台，立即領取 28 USDT</title>
   <meta name="description" content="GOFUN - 註冊立即免費領取 28 USDT 試玩金，多元加密支付，24/7客服安全保障，立即開啟你的遊戲體驗！">
   <meta name="keywords" content="GOFUN, 加密娛樂, 線上賭場, 休閒遊戲, 會員獎勵, USDT 試玩, 優惠活動">
 
@@ -38,9 +38,10 @@
      fbq('init', '1177577017109941');
      fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1177577017109941&ev=PageView&noscript=1"
-  /></noscript>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1177577017109941&ev=PageView&noscript=1" />
+  </noscript>
   <!-- End Meta Pixel Code -->
 
   <style>
@@ -52,7 +53,6 @@
       font-family: 'Arial', sans-serif;
     }
     body {
- 
       background: radial-gradient(circle at top, #0D0D2B 0%, #191970 100%);
       color: #ffffff;
       line-height: 1.6;
@@ -74,13 +74,11 @@
       top: 0;
       z-index: 1000;
       padding: 20px 0;
-
       background: rgba(13, 13, 43, 0.25);
       backdrop-filter: blur(8px);
       box-shadow: 0 2px 20px rgba(0, 255, 255, 0.1);
       overflow: hidden;
     }
-
     header::before {
       content: '';
       position: absolute;
@@ -96,7 +94,6 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-
     .header-container {
       display: flex;
       justify-content: space-between;
@@ -107,21 +104,19 @@
       height: auto;
     }
 
-
+    /* hero-section */
     .hero-section {
       position: relative;
-      padding-top: 120px; 
+      padding-top: 120px;
       padding-bottom: 80px;
       text-align: center;
-
       background: linear-gradient(to right, rgba(13, 13, 43, 0.8), rgba(25, 25, 112, 0.8));
       background-blend-mode: overlay;
-
-      background-image: url('/api/placeholder/1920/1080');
+      /* 替換成真實圖檔 */
+      background-image: url('/images/hero-bg.jpg');
       background-size: cover;
       background-position: center;
     }
-
     .hero-content {
       max-width: 900px;
       margin: 0 auto;
@@ -132,6 +127,14 @@
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
     }
+
+    .hero-tagline {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+
     .bonus-badge {
       position: absolute;
       top: 80px;
@@ -159,7 +162,6 @@
       margin-bottom: 30px;
       color: #E0E0E0;
     }
-
 
     .cta-btn {
       display: inline-block;
@@ -197,6 +199,7 @@
       animation: none;
     }
 
+    /* countdown */
     .countdown-container {
       margin: 30px 0;
       text-align: center;
@@ -228,7 +231,6 @@
       box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
       text-align: center;
     }
-
     .countdown-item::before {
       content: '';
       position: absolute;
@@ -236,11 +238,8 @@
       border-radius: 8px;
       padding: 2px;
       border: 2px solid transparent;
-      background:
-        linear-gradient(90deg, #0ff, #00bfff) border-box;
-      -webkit-mask:
-        linear-gradient(#fff 0 0) padding-box, 
-        linear-gradient(#fff 0 0) border-box;
+      background: linear-gradient(90deg, #0ff, #00bfff) border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0) border-box;
       -webkit-mask-composite: xor;
       pointer-events: none;
     }
@@ -256,7 +255,7 @@
       margin-top: 5px;
     }
 
-
+    /* user-counter */
     .user-counter {
       background-color: rgba(26, 26, 64, 0.7);
       padding: 10px 15px;
@@ -310,7 +309,26 @@
       margin: 0 5px;
     }
 
+    .claimed-counter {
+      margin-top: 10px;
+      background-color: rgba(26, 26, 64, 0.7);
+      padding: 10px 15px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+    }
+    .claimed-counter-text {
+      font-size: 0.9rem;
+      color: #E0E0E0;
+    }
+    .claimed-counter-number {
+      color: #FFD700;
+      font-weight: bold;
+      margin: 0 5px;
+    }
 
+    /* social-proof & payment icons */
     .social-proof {
       padding: 30px 0;
       background-color: rgba(26, 26, 64, 0.5);
@@ -341,7 +359,19 @@
       margin-right: 5px;
     }
 
+    .payment-methods {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .payment-methods img {
+      width: 50px;
+      height: auto;
+    }
 
+    /* games-showcase */
     .games-showcase {
       margin-top: 40px;
       display: grid;
@@ -385,7 +415,7 @@
       color: #E0E0E0;
     }
 
-
+    /* benefits-section */
     .benefits-section {
       padding: 80px 0;
       background-color: #0f0f35;
@@ -434,7 +464,7 @@
       color: #FFD700;
     }
 
-
+    /* promo-section */
     .promo-section {
       padding: 80px 0;
       background: linear-gradient(to right, #191970, #0D0D2B);
@@ -478,7 +508,7 @@
       text-shadow: 0 2px 4px rgba(0, 255, 255, 0.3);
     }
 
-
+    /* testimonials-section */
     .testimonials-section {
       padding: 80px 0;
       background: linear-gradient(to right, #0D0D2B, #191970);
@@ -530,7 +560,7 @@
       margin-top: 5px;
     }
 
-
+    /* steps-section */
     .steps-section {
       padding: 80px 0;
       background-color: #0f0f35;
@@ -571,7 +601,7 @@
       color: #FFD700;
     }
 
-
+    /* quick-registration-section */
     .quick-registration-section {
       background-color: #0D0D2B;
       padding: 50px 0;
@@ -641,7 +671,7 @@
       height: 40px;
     }
 
-
+    /* crypto-stats-section */
     .crypto-stats-section {
       padding: 60px 0;
       background-color: #151544;
@@ -686,7 +716,7 @@
       border-radius: 5px;
     }
 
-
+    /* footer */
     footer {
       background-color: #080820;
       padding: 40px 0;
@@ -705,7 +735,6 @@
     .footer-links a:hover {
       color: #FFD700;
     }
-
 
     @media (max-width: 768px) {
       h1 {
@@ -772,9 +801,13 @@
   <section class="hero-section">
     <div class="bonus-badge">註冊就送 28 USDT</div>
     <div class="container hero-content">
-      <h1>GOFUN – 全新加密娛樂平台</h1>
+
+
+      <p class="hero-tagline">台灣首家加密娛樂平台</p>
+
+      <h1>最安全的 USDT 遊戲平台</h1>
       <p class="hero-subtitle">
-        支援加密貨幣支付，提供休閒、競技、賭場多元遊戲。<br>現在加入，立刻領取 28 USDT 試玩金！
+        支援多種加密貨幣支付，提供休閒、競技、賭場多元遊戲。<br>現在加入，立即領取 28 USDT 試玩金！
       </p>
 
       <div class="countdown-container">
@@ -796,6 +829,10 @@
             <div class="countdown-number" id="seconds">00</div>
             <div class="countdown-label">秒</div>
           </div>
+        </div>
+
+        <div style="margin-top: 15px; color: #FFD700;">
+          剩餘名額：<span id="remaining-quota">72</span>
         </div>
       </div>
 
@@ -823,11 +860,13 @@
         </div>
       </div>
 
+
       <a href="https://97y.me/t4Bge" class="cta-btn" rel="noopener"
          onclick="fbq('track', 'Lead');">
-        立即註冊 領取試玩金
+        立即領取 28 USDT
       </a>
 
+ 
       <div class="user-counter">
         <div class="user-counter-dot"></div>
         <div class="user-counter-text">
@@ -835,40 +874,50 @@
         </div>
       </div>
 
+      <div class="claimed-counter">
+        <div class="claimed-counter-text">
+          已有 <span class="claimed-counter-number" id="claimed-users">1578</span> 人成功領取
+        </div>
+      </div>
+
+      <!-- social proof -->
       <div class="social-proof" style="margin-top: 40px;">
         <p>超過 10,000+ 位玩家已選擇 GOFUN，月活人數持續攀升中</p>
         <div class="trust-icons">
           <div class="trust-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                 height="16" fill="currentColor" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                 fill="currentColor" viewBox="0 0 16 16">
               <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
             </svg>
             安全加密
           </div>
           <div class="trust-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                 height="16" fill="currentColor" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                 fill="currentColor" viewBox="0 0 16 16">
               <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
               <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
             </svg>
             24/7客服
           </div>
           <div class="trust-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                 height="16" fill="currentColor" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                 fill="currentColor" viewBox="0 0 16 16">
               <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
             </svg>
             多元玩法
           </div>
         </div>
+
+
+        <div class="payment-methods">
+          <img src="images/btc.webp" alt="BTC">
+          <img src="images/eth.webp" alt="ETH">
+          <img src="images/usdt.webp" alt="USDT">
+          <img src="images/TRX.webp" alt="TRX">
+
+        </div>
       </div>
 
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="https://97y.me/t4Bge" class="cta-btn" rel="noopener"
-           onclick="fbq('track', 'CompleteRegistration');">
-          馬上開始
-        </a>
-      </div>
     </div>
   </section>
 
@@ -878,7 +927,7 @@
       <div class="benefits-grid">
         <div class="benefit-card">
           <h3>即刻領取 28 USDT</h3>
-          <p>新會員注册完成即可獲得 28 USDT 試玩金，輕鬆體驗多種遊戲類型。</p>
+          <p>新會員註冊完成即可獲得 28 USDT 試玩金，輕鬆體驗多種遊戲類型。</p>
         </div>
         <div class="benefit-card">
           <h3>支援加密支付</h3>
@@ -903,9 +952,10 @@
         <p>新人立即領取</p>
         <div class="promo-highlight">28 USDT 試玩金</div>
         <p>更多詳細資訊請洽客服</p>
+
         <a href="https://97y.me/t4Bge" class="cta-btn" rel="noopener"
            onclick="fbq('track','InitiateCheckout');">
-          立即加入
+          限時註冊領獎
         </a>
       </div>
     </div>
@@ -917,7 +967,7 @@
       <div class="steps-container">
         <div class="testimonial-card">
           <div class="testimonial-content">
-            「GOFUN 的 28 USDT 試玩金活動真的超划算，讓我先玩幾把就上手了，之後還陸續領到其他紅利！」
+            「GOFUN 的 28 USDT 試玩金活動真的超划算，領了之後用心玩了幾場，居然一次就贏了 500 USDT！」
           </div>
           <div class="testimonial-author">
             <div class="testimonial-author-img">K</div>
@@ -935,6 +985,19 @@
             <div class="testimonial-author-img">L</div>
             <div class="testimonial-author-info">
               <div class="testimonial-name">林小姐</div>
+              <div class="testimonial-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            「充值之後我就試了策略型遊戲，沒想到一天內獲得 300 USDT 累積獎勵，超嗨！」 
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-author-img">J</div>
+            <div class="testimonial-author-info">
+              <div class="testimonial-name">江小姐</div>
               <div class="testimonial-rating">★★★★★</div>
             </div>
           </div>
@@ -972,7 +1035,6 @@
     </div>
   </section>
 
-
   <section class="quick-registration-section">
     <div class="container">
       <div class="quick-registration-container">
@@ -980,7 +1042,7 @@
         <p>無需繁雜流程，選擇喜好的方式，快速完成註冊！</p>
         
         <div class="quick-registration-steps">
-          <!-- GOOGLE 一鍵註冊 -->
+
           <div class="quick-registration-step">
             <img src="images/google.webp" alt="Google 圖案" class="qr-step-icon" />
             <div class="qr-step-title">使用 GOOGLE 一鍵註冊</div>
@@ -990,7 +1052,7 @@
               ③ 完成註冊
             </div>
           </div>
-          <!-- LINE 一鍵註冊 -->
+
           <div class="quick-registration-step">
             <img src="images/line.webp" alt="LINE 圖案" class="qr-step-icon" />
             <div class="qr-step-title">使用 LINE 一鍵註冊</div>
@@ -1004,7 +1066,6 @@
       </div>
     </div>
   </section>
-
 
   <section class="crypto-stats-section">
     <div class="container">
@@ -1028,7 +1089,8 @@
       </div>
       <div style="color:#bbb;font-size:0.8rem;margin-bottom:10px;">
         本平台僅適用於年滿 18 歲以上用戶。請理性娛樂，勿過度沉迷，享受健康遊戲體驗。<br>
-        活動內容與 28 USDT 試玩金適用於特定規則及條款，詳情請洽客服。
+        活動內容與 28 USDT 試玩金適用於特定規則及條款，詳情請洽客服。<br>
+        本平台嚴格遵守所在司法管轄區的法律及規範，並落實 KYC 驗證以確保玩家權益及安全。
       </div>
       <div style="color:#777;font-size:0.8rem;">
         © 2025 GOFUN. All Rights Reserved.
@@ -1052,6 +1114,7 @@
       document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
       document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
 
+
       if (distance < 0) {
         clearInterval(countdownfunction);
         document.getElementById("days").innerHTML = "00";
@@ -1062,6 +1125,15 @@
     }, 1000);
 
 
+    var remainingQuota = 72;
+    setInterval(function() {
+      if (remainingQuota > 10) {
+        remainingQuota -= Math.floor(Math.random() * 2);
+      }
+      document.getElementById("remaining-quota").innerText = remainingQuota;
+    }, 8000);
+
+
     setInterval(function() {
       const currentUsers = parseInt(document.getElementById("active-users").innerText);
       const change = Math.floor(Math.random() * 10) - 4;
@@ -1070,26 +1142,28 @@
     }, 5000);
 
 
+    setInterval(function() {
+      const currentClaimed = parseInt(document.getElementById("claimed-users").innerText);
+      const add = Math.floor(Math.random() * 3) + 1;
+      document.getElementById("claimed-users").innerText = currentClaimed + add;
+    }, 10000);
+
+
     const canvas = document.getElementById('cryptoChart');
     const ctx = canvas.getContext('2d');
 
-
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
-
 
     let dataPoints = [];
     const maxPoints = 20;
 
     for(let i = 0; i < maxPoints; i++){
-      dataPoints.push(50 + Math.random() * 50); // 初始隨機值
+      dataPoints.push(50 + Math.random() * 50); 
     }
 
     function drawChart() {
-
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  
       ctx.strokeStyle = '#00ffff';
       ctx.lineWidth = 2;
       ctx.beginPath();
@@ -1106,7 +1180,7 @@
       }
       ctx.stroke();
 
- 
+
       for(let i = 0; i < dataPoints.length; i++){
         let x = i * stepX;
         let y = canvas.height - dataPoints[i] * (canvas.height / 100);
@@ -1117,19 +1191,15 @@
       }
     }
 
-
     function updateData() {
-
       dataPoints.shift();
- 
       let newValue = 50 + Math.random() * 50;
       dataPoints.push(newValue);
       drawChart();
     }
 
 
-    setInterval(updateData, 1000);
-
+    setInterval(updateData, 3000);
 
     drawChart();
   </script>
