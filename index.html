@@ -46,6 +46,12 @@
 
   <style>
 
+    /* 加強字體渲染與清晰度（含移動端） */
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -67,7 +73,7 @@
       padding: 0 20px;
     }
 
-
+    /* header */
     header {
       position: fixed;
       width: 100%;
@@ -112,7 +118,6 @@
       text-align: center;
       background: linear-gradient(to right, rgba(13, 13, 43, 0.8), rgba(25, 25, 112, 0.8));
       background-blend-mode: overlay;
-      /* 替換成真實圖檔 */
       background-image: url('/images/hero-bg.jpg');
       background-size: cover;
       background-position: center;
@@ -127,14 +132,12 @@
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
     }
-
     .hero-tagline {
       font-size: 1.2rem;
       font-weight: bold;
       color: #FFD700;
       margin-bottom: 10px;
     }
-
     .bonus-badge {
       position: absolute;
       top: 80px;
@@ -149,7 +152,6 @@
       transform: rotate(15deg);
       font-size: 0.9rem;
     }
-
     h1 {
       font-size: 2.8rem;
       font-weight: 700;
@@ -162,13 +164,11 @@
       margin-bottom: 30px;
       color: #E0E0E0;
     }
-
     .cta-btn {
       display: inline-block;
       padding: 16px 32px;
       background: linear-gradient(to right, #0ff, #00bfff);
       color: #000000;
-      text-decoration: none;
       border-radius: 30px;
       font-weight: 600;
       font-size: 1.1rem;
@@ -358,7 +358,6 @@
     .trust-icon svg {
       margin-right: 5px;
     }
-
     .payment-methods {
       display: flex;
       justify-content: center;
@@ -783,6 +782,21 @@
         float: none;
         margin: 0 auto 10px;
       }
+
+      /* 移動端移除或降低 backdrop-filter 避免過度模糊 */
+      header,
+      .hero-content,
+      .countdown-item,
+      .game-card,
+      .benefit-card,
+      .promo-card,
+      .testimonial-card,
+      .quick-registration-container,
+      .quick-registration-step,
+      .crypto-stats-container {
+        backdrop-filter: none !important;
+        background-color: rgba(0,0,0,0.5) !important; /* 可自行調整透明度 */
+      }
     }
 
   </style>
@@ -801,10 +815,7 @@
   <section class="hero-section">
     <div class="bonus-badge">註冊就送 28 USDT</div>
     <div class="container hero-content">
-
-
       <p class="hero-tagline">亞洲頂級加密娛樂平台</p>
-
       <h1>最安全的 USDT 遊戲平台</h1>
       <p class="hero-subtitle">
         支援多種加密貨幣支付，提供休閒、競技、賭場多元遊戲。<br>現在加入，立即領取 28 USDT 試玩金！
@@ -830,11 +841,15 @@
             <div class="countdown-label">秒</div>
           </div>
         </div>
-
         <div style="margin-top: 15px; color: #FFD700;">
           剩餘名額：<span id="remaining-quota">72</span>
         </div>
       </div>
+
+      <a href="https://97y.me/t4Bge" class="cta-btn" rel="noopener"
+         onclick="fbq('track', 'Lead');">
+        立即領取 28 USDT
+      </a>
 
       <div class="games-showcase">
         <div class="game-card">
@@ -861,12 +876,7 @@
       </div>
 
 
-      <a href="https://97y.me/t4Bge" class="cta-btn" rel="noopener"
-         onclick="fbq('track', 'Lead');">
-        立即領取 28 USDT
-      </a>
 
- 
       <div class="user-counter">
         <div class="user-counter-dot"></div>
         <div class="user-counter-text">
@@ -907,14 +917,11 @@
             多元玩法
           </div>
         </div>
-
-
         <div class="payment-methods">
           <img src="images/BTC.webp" alt="BTC">
           <img src="images/ETH.webp" alt="ETH">
           <img src="images/USDT.webp" alt="USDT">
           <img src="images/TRX.webp" alt="TRX">
-
         </div>
       </div>
 
@@ -989,7 +996,6 @@
             </div>
           </div>
         </div>
-
         <div class="testimonial-card">
           <div class="testimonial-content">
             「充值之後我就試了策略型遊戲，沒想到一天內獲得 300 USDT 累積獎勵，超嗨！」 
@@ -1042,7 +1048,6 @@
         <p>無需繁雜流程，選擇喜好的方式，快速完成註冊！</p>
         
         <div class="quick-registration-steps">
-
           <div class="quick-registration-step">
             <img src="images/google.webp" alt="Google 圖案" class="qr-step-icon" />
             <div class="qr-step-title">使用 GOOGLE 一鍵註冊</div>
@@ -1052,7 +1057,6 @@
               ③ 完成註冊
             </div>
           </div>
-
           <div class="quick-registration-step">
             <img src="images/line.webp" alt="LINE 圖案" class="qr-step-icon" />
             <div class="qr-step-title">使用 LINE 一鍵註冊</div>
@@ -1099,7 +1103,7 @@
   </footer>
 
   <script>
-
+    // 倒數計時
     var countDownDate = new Date("2025-03-15T00:00:00").getTime();
     var countdownfunction = setInterval(function() {
       var now = new Date().getTime();
@@ -1114,7 +1118,6 @@
       document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
       document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
 
-
       if (distance < 0) {
         clearInterval(countdownfunction);
         document.getElementById("days").innerHTML = "00";
@@ -1124,7 +1127,7 @@
       }
     }, 1000);
 
-
+    // 剩餘名額
     var remainingQuota = 72;
     setInterval(function() {
       if (remainingQuota > 10) {
@@ -1133,7 +1136,7 @@
       document.getElementById("remaining-quota").innerText = remainingQuota;
     }, 8000);
 
-
+    // 在線人數
     setInterval(function() {
       const currentUsers = parseInt(document.getElementById("active-users").innerText);
       const change = Math.floor(Math.random() * 10) - 4;
@@ -1141,14 +1144,14 @@
       document.getElementById("active-users").innerText = newUsers;
     }, 5000);
 
-
+    // 領取人數
     setInterval(function() {
       const currentClaimed = parseInt(document.getElementById("claimed-users").innerText);
       const add = Math.floor(Math.random() * 3) + 1;
       document.getElementById("claimed-users").innerText = currentClaimed + add;
     }, 10000);
 
-
+    // 模擬加密貨幣圖表
     const canvas = document.getElementById('cryptoChart');
     const ctx = canvas.getContext('2d');
 
@@ -1159,7 +1162,7 @@
     const maxPoints = 20;
 
     for(let i = 0; i < maxPoints; i++){
-      dataPoints.push(50 + Math.random() * 50); 
+      dataPoints.push(50 + Math.random() * 50);
     }
 
     function drawChart() {
@@ -1180,7 +1183,6 @@
       }
       ctx.stroke();
 
-
       for(let i = 0; i < dataPoints.length; i++){
         let x = i * stepX;
         let y = canvas.height - dataPoints[i] * (canvas.height / 100);
@@ -1198,9 +1200,7 @@
       drawChart();
     }
 
-
     setInterval(updateData, 3000);
-
     drawChart();
   </script>
 
