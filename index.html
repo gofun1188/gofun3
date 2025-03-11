@@ -12,7 +12,7 @@
   <!-- Facebook Domain Verification  -->
   <meta name="facebook-domain-verification" content="474738252260202" />
 
-  <!-- Open Graph 標籤 -->
+  <!-- Open Graph  -->
   <meta property="og:title" content="GOFUN - 加密娛樂平台，註冊就送 28 USDT 試玩金">
   <meta property="og:description" content="立即加入 GOFUN，領取 28 USDT 試玩金，體驗多元遊戲及加密賭場，再享豐富專屬優惠！">
   <meta property="og:type" content="website">
@@ -27,16 +27,16 @@
 
   <!-- Meta Pixel Code -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1177577017109941');
-  fbq('track', 'PageView');
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)}
+     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+     n.queue=[];t=b.createElement(e);t.async=!0;
+     t.src=v;s=b.getElementsByTagName(e)[0];
+     s.parentNode.insertBefore(t,s)}(window, document,'script',
+     'https://connect.facebook.net/en_US/fbevents.js');
+     fbq('init', '1177577017109941');
+     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1177577017109941&ev=PageView&noscript=1"
@@ -44,6 +44,7 @@
   <!-- End Meta Pixel Code -->
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -51,10 +52,14 @@
       font-family: 'Arial', sans-serif;
     }
     body {
-      background-color: #0D0D2B;
+ 
+      background: radial-gradient(circle at top, #0D0D2B 0%, #191970 100%);
       color: #ffffff;
       line-height: 1.6;
       overflow-x: hidden;
+    }
+    a {
+      text-decoration: none;
     }
     .container {
       max-width: 1200px;
@@ -62,15 +67,36 @@
       padding: 0 20px;
     }
 
+
     header {
-      padding: 20px 0;
-      background-color: rgba(13, 13, 43, 0.9);
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      padding: 20px 0;
+
+      background: rgba(13, 13, 43, 0.25);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 20px rgba(0, 255, 255, 0.1);
+      overflow: hidden;
     }
+
+    header::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent 60%);
+      animation: swirl 20s linear infinite;
+    }
+    @keyframes swirl {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
     .header-container {
       display: flex;
       justify-content: space-between;
@@ -81,70 +107,31 @@
       height: auto;
     }
 
+
     .hero-section {
-      padding-top: 100px;
-      padding-bottom: 60px;
-      background: linear-gradient(to right, #0D0D2B, #191970);
-      text-align: center;
       position: relative;
+      padding-top: 120px; 
+      padding-bottom: 80px;
+      text-align: center;
+
+      background: linear-gradient(to right, rgba(13, 13, 43, 0.8), rgba(25, 25, 112, 0.8));
+      background-blend-mode: overlay;
+
       background-image: url('/api/placeholder/1920/1080');
       background-size: cover;
       background-position: center;
-      background-blend-mode: overlay;
-    }
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 30px 0;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: #ffffff;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    .hero-subtitle {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      color: #E0E0E0;
-    }
-    .cta-btn {
-      display: inline-block;
-      padding: 16px 32px;
-      background: linear-gradient(to right, #FF416C, #FF4B2B);
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 20px;
-      box-shadow: 0 10px 20px rgba(255, 65, 108, 0.3);
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 10px 20px rgba(255, 65, 108, 0.3);
-      }
-      50% {
-        transform: scale(1.05);
-        box-shadow: 0 15px 25px rgba(255, 65, 108, 0.4);
-      }
-      100% {
-        transform: scale(1);
-        box-shadow: 0 10px 20px rgba(255, 65, 108, 0.3);
-      }
-    }
-    .cta-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 25px rgba(255, 65, 108, 0.4);
-      animation: none;
     }
 
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    }
     .bonus-badge {
       position: absolute;
       top: 80px;
@@ -158,6 +145,56 @@
       z-index: 10;
       transform: rotate(15deg);
       font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0, 255, 255, 0.4);
+    }
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #E0E0E0;
+    }
+
+
+    .cta-btn {
+      display: inline-block;
+      padding: 16px 32px;
+      background: linear-gradient(to right, #0ff, #00bfff);
+      color: #000000;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 20px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+      transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+      }
+      50% {
+        transform: scale(1.06);
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+      }
+    }
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      opacity: 0.85;
+      animation: none;
     }
 
     .countdown-container {
@@ -181,23 +218,44 @@
       gap: 15px;
     }
     .countdown-item {
-      background-color: rgba(13, 13, 43, 0.8);
+      position: relative;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
       border-radius: 8px;
       padding: 15px;
       min-width: 80px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      border: 1px solid rgba(255, 215, 0, 0.2);
+      border: 1px solid rgba(0,255,255,0.3);
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+      text-align: center;
+    }
+
+    .countdown-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 8px;
+      padding: 2px;
+      border: 2px solid transparent;
+      background:
+        linear-gradient(90deg, #0ff, #00bfff) border-box;
+      -webkit-mask:
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0) border-box;
+      -webkit-mask-composite: xor;
+      pointer-events: none;
     }
     .countdown-number {
       font-size: 2rem;
       font-weight: bold;
-      color: #FFD700;
+      color: #00ffff;
+      text-shadow: 0 0 5px #00ffff;
     }
     .countdown-label {
       font-size: 0.8rem;
       color: #E0E0E0;
       margin-top: 5px;
     }
+
 
     .user-counter {
       background-color: rgba(26, 26, 64, 0.7);
@@ -206,7 +264,7 @@
       display: inline-flex;
       align-items: center;
       margin-top: 20px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
     }
     .user-counter-dot {
       width: 10px;
@@ -252,11 +310,14 @@
       margin: 0 5px;
     }
 
+
     .social-proof {
       padding: 30px 0;
       background-color: rgba(26, 26, 64, 0.5);
       text-align: center;
       margin-top: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.1);
     }
     .social-proof p {
       font-style: italic;
@@ -280,6 +341,7 @@
       margin-right: 5px;
     }
 
+
     .games-showcase {
       margin-top: 40px;
       display: grid;
@@ -287,14 +349,18 @@
       gap: 20px;
     }
     .game-card {
-      background-color: rgba(26, 26, 64, 0.6);
-      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
+      border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
+      box-shadow: 0 8px 16px rgba(0, 255, 255, 0.1);
+      transition: transform 0.5s ease, box-shadow 0.3s;
+      perspective: 1000px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
     .game-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-5px) scale(1.02) rotateX(3deg) rotateY(-3deg);
+      box-shadow: 0 15px 25px rgba(0, 255, 255, 0.2);
     }
     .game-img {
       width: 100%;
@@ -319,6 +385,7 @@
       color: #E0E0E0;
     }
 
+
     .benefits-section {
       padding: 80px 0;
       background-color: #0f0f35;
@@ -339,7 +406,7 @@
       transform: translateX(-50%);
       width: 80px;
       height: 3px;
-      background: linear-gradient(to right, #FF416C, #FF4B2B);
+      background: linear-gradient(to right, #0ff, #00bfff);
     }
     .benefits-grid {
       display: grid;
@@ -348,21 +415,25 @@
       margin-top: 40px;
     }
     .benefit-card {
-      background-color: #1A1A40;
+      background-color: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
       border-radius: 10px;
       padding: 30px;
       text-align: center;
       transition: transform 0.3s;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 20px rgba(0, 255, 255, 0.05);
+      border: 1px solid rgba(255,255,255,0.1);
     }
     .benefit-card:hover {
       transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 255, 255, 0.1);
     }
     .benefit-card h3 {
       font-size: 1.5rem;
       margin: 20px 0 15px;
       color: #FFD700;
     }
+
 
     .promo-section {
       padding: 80px 0;
@@ -371,12 +442,13 @@
     }
     .promo-card {
       background-color: rgba(26, 26, 64, 0.8);
+      backdrop-filter: blur(4px);
       border-radius: 15px;
       padding: 40px;
       margin: 0 auto;
       max-width: 800px;
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-      border: 1px solid rgba(255, 215, 0, 0.3);
+      border: 1px solid rgba(0,255,255,0.2);
       position: relative;
       overflow: hidden;
     }
@@ -385,7 +457,7 @@
       position: absolute;
       top: 20px;
       right: -35px;
-      background: #FF4B2B;
+      background: #00bfff;
       color: white;
       padding: 5px 40px;
       transform: rotate(45deg);
@@ -401,10 +473,11 @@
     .promo-highlight {
       font-size: 2.5rem;
       font-weight: 700;
-      color: #FF4B2B;
+      color: #00bfff;
       margin: 20px 0;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      text-shadow: 0 2px 4px rgba(0, 255, 255, 0.3);
     }
+
 
     .testimonials-section {
       padding: 80px 0;
@@ -418,10 +491,12 @@
     }
     .testimonial-card {
       background-color: rgba(26, 26, 64, 0.8);
+      backdrop-filter: blur(4px);
       border-radius: 10px;
       padding: 25px;
       margin-bottom: 20px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
+      border: 1px solid rgba(0,255,255,0.2);
     }
     .testimonial-content {
       font-style: italic;
@@ -455,6 +530,7 @@
       margin-top: 5px;
     }
 
+
     .steps-section {
       padding: 80px 0;
       background-color: #0f0f35;
@@ -463,17 +539,19 @@
       display: flex;
       align-items: flex-start;
       margin-bottom: 40px;
-      background-color: #1A1A40;
+      background-color: rgba(255,255,255,0.05);
+      backdrop-filter: blur(5px);
       border-radius: 10px;
       padding: 25px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 20px rgba(0, 255, 255, 0.05);
       transition: transform 0.3s;
+      border: 1px solid rgba(255,255,255,0.1);
     }
     .step-item:hover {
       transform: translateY(-5px);
     }
     .step-number {
-      background: linear-gradient(to right, #FF416C, #FF4B2B);
+      background: linear-gradient(to right, #0ff, #00bfff);
       color: white;
       width: 50px;
       height: 50px;
@@ -485,6 +563,7 @@
       font-weight: bold;
       margin-right: 20px;
       flex-shrink: 0;
+      box-shadow: 0 0 10px rgba(0,255,255,0.3);
     }
     .step-content h3 {
       font-size: 1.4rem;
@@ -492,7 +571,7 @@
       color: #FFD700;
     }
 
-    /* 新增：一鍵註冊區塊 */
+
     .quick-registration-section {
       background-color: #0D0D2B;
       padding: 50px 0;
@@ -502,9 +581,11 @@
       margin: 0 auto;
       text-align: center;
       background-color: rgba(26, 26, 64, 0.8);
+      backdrop-filter: blur(4px);
       border-radius: 10px;
       padding: 30px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+      border: 1px solid rgba(255,255,255,0.1);
     }
     .quick-registration-title {
       font-size: 1.8rem;
@@ -517,7 +598,7 @@
       content: '';
       width: 50px;
       height: 3px;
-      background: linear-gradient(to right, #FF416C, #FF4B2B);
+      background: linear-gradient(to right, #0ff, #00bfff);
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -531,12 +612,14 @@
     }
     .quick-registration-step {
       background-color: rgba(13, 13, 43, 0.5);
+      backdrop-filter: blur(4px);
       padding: 20px;
       margin-bottom: 20px;
       width: 100%;
       border-radius: 8px;
       text-align: left;
       transition: transform 0.3s;
+      border: 1px solid rgba(255,255,255,0.1);
     }
     .quick-registration-step:hover {
       transform: translateY(-3px);
@@ -558,7 +641,52 @@
       height: 40px;
     }
 
-    /* 頁尾 */
+
+    .crypto-stats-section {
+      padding: 60px 0;
+      background-color: #151544;
+      text-align: center;
+    }
+    .crypto-stats-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .crypto-stats-title {
+      font-size: 1.8rem;
+      color: #FFD700;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .crypto-stats-title::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(to right, #0ff, #00bfff);
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .crypto-stats-desc {
+      font-size: 0.95rem;
+      color: #E0E0E0;
+      margin-bottom: 30px;
+    }
+    #cryptoChart {
+      width: 100%;
+      height: 300px;
+      background: rgba(0,0,0,0.2);
+      border-radius: 5px;
+    }
+
+
     footer {
       background-color: #080820;
       padding: 40px 0;
@@ -577,6 +705,7 @@
     .footer-links a:hover {
       color: #FFD700;
     }
+
 
     @media (max-width: 768px) {
       h1 {
@@ -626,10 +755,10 @@
         margin: 0 auto 10px;
       }
     }
+
   </style>
 
 </head>
-
 <body>
 
   <header>
@@ -843,7 +972,7 @@
     </div>
   </section>
 
-  <!-- 新增：LINE & GOOGLE 一鍵註冊引導 -->
+
   <section class="quick-registration-section">
     <div class="container">
       <div class="quick-registration-container">
@@ -875,7 +1004,19 @@
       </div>
     </div>
   </section>
-  <!-- 新增區塊結束 -->
+
+
+  <section class="crypto-stats-section">
+    <div class="container">
+      <div class="crypto-stats-container">
+        <h2 class="crypto-stats-title">加密貨幣行情動態</h2>
+        <p class="crypto-stats-desc">
+          以下範例模擬顯示部分加密幣的走勢圖，提供您隨時掌握大致的市場動態。
+        </p>
+        <canvas id="cryptoChart"></canvas>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="container">
@@ -896,7 +1037,7 @@
   </footer>
 
   <script>
-    // 倒數計時
+
     var countDownDate = new Date("2025-03-15T00:00:00").getTime();
     var countdownfunction = setInterval(function() {
       var now = new Date().getTime();
@@ -920,13 +1061,77 @@
       }
     }, 1000);
 
-    // 在線人數動態變化
+
     setInterval(function() {
       const currentUsers = parseInt(document.getElementById("active-users").innerText);
-      const change = Math.floor(Math.random() * 10) - 4; 
+      const change = Math.floor(Math.random() * 10) - 4;
       const newUsers = Math.max(300, Math.min(450, currentUsers + change));
       document.getElementById("active-users").innerText = newUsers;
     }, 5000);
+
+
+    const canvas = document.getElementById('cryptoChart');
+    const ctx = canvas.getContext('2d');
+
+
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+
+
+    let dataPoints = [];
+    const maxPoints = 20;
+
+    for(let i = 0; i < maxPoints; i++){
+      dataPoints.push(50 + Math.random() * 50); // 初始隨機值
+    }
+
+    function drawChart() {
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  
+      ctx.strokeStyle = '#00ffff';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+
+      let stepX = canvas.width / (maxPoints - 1);
+      for(let i = 0; i < dataPoints.length; i++){
+        let x = i * stepX;
+        let y = canvas.height - dataPoints[i] * (canvas.height / 100);
+        if(i === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+      }
+      ctx.stroke();
+
+ 
+      for(let i = 0; i < dataPoints.length; i++){
+        let x = i * stepX;
+        let y = canvas.height - dataPoints[i] * (canvas.height / 100);
+        ctx.fillStyle = '#ff0';
+        ctx.beginPath();
+        ctx.arc(x, y, 3, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+
+    function updateData() {
+
+      dataPoints.shift();
+ 
+      let newValue = 50 + Math.random() * 50;
+      dataPoints.push(newValue);
+      drawChart();
+    }
+
+
+    setInterval(updateData, 1000);
+
+
+    drawChart();
   </script>
 
 </body>
